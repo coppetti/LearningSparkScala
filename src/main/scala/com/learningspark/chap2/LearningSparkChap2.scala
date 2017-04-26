@@ -66,18 +66,19 @@ object LearningSparkChap2{
     // starts spark context to be used within this object
     val sc = startContext()
 
+    // file that will be used in this chapter's examples
+    val file = "/Users/matheussilveira/workspace/learning-spark/README.md"
+
     println("\n /////// Get Lines:\n")
-    getLines(sc,"/Users/matheussilveira/workspace/learning-spark/README.md")
+    getLines(sc,file)
 
     println("\n /////// Lines with Python:\n")
-    linesWPython(sc,"/Users/matheussilveira/workspace/learning-spark/README.md")
-
+    linesWPython(sc,file)
 
     println("\n /////// Lines with Python Refactored:\n")
-    linesWPythonRefac(sc,"/Users/matheussilveira/workspace/learning-spark/README.md")
-
+    linesWPythonRefac(sc,file)
 
     println("\n /////// Word Counter:\n")
-    countWords(sc,"/Users/matheussilveira/workspace/learning-spark/README.md")
+    countWords(sc,file)
   }
 }
